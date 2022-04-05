@@ -29,7 +29,12 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -74,7 +79,7 @@ img {
   border: 1px solid black;
   border-radius: 19px;
 }
-.item + .item {
+.item {
   margin-top: 25px;
 }
 .main__list {
@@ -83,6 +88,10 @@ img {
 }
 .item:nth-child(even) {
   flex-direction: row-reverse;
+}
+.item:hover {
+  transition: 0.5s ease;
+  background-color: #85144b;
 }
 @media only screen and (max-width: 600px) {
   body {
